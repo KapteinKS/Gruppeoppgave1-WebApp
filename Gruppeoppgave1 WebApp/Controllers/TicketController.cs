@@ -16,6 +16,7 @@ namespace Gruppeoppgave1_WebApp.Controllers
         }
 
         [HttpPost]
+        //Method for adding an order to a new or existing customer
         public void OrderTicket(Ticket orderedTicket)
         {
             var order = new Order()
@@ -49,6 +50,7 @@ namespace Gruppeoppgave1_WebApp.Controllers
             }
         }
 
+        //Method for retrieving all orders
         public List<Ticket> GetTickets()
         {
             List<Customer> customers = _db.Customers.ToList();

@@ -48,5 +48,28 @@ namespace Gruppeoppgave1_WebApp.Controllers
                 _db.SaveChanges();
             }
         }
+
+        public List<Ticket> GetTickets()
+        {
+            List<Customer> customers = _db.Customers.ToList();
+            List<Ticket> orders = new List<Ticket>();
+            foreach (var customer in customers)
+            {
+                foreach (var order in customer.Orders)
+                {
+                    var anOrder = new Ticket
+                    {
+                        Name = customer.Name,
+                        Email = customer.Email,
+                        Phone = customer.Phone,
+                        Route = order.Route,
+                        Date = order.Date,
+                        Passengers = order.Passengers
+                    };
+                    orders.Add(anOrder);
+                }
+            }
+            return orders;
+        }
     }
 }

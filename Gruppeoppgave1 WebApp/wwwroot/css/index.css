@@ -1,10 +1,12 @@
 ﻿body {
 }
 
-.container{
-    width: 50px;
+div.route_container{
+    width: 50%;
+    height: 100px;
+    margin: auto;
 }
 
-p{
-    color: red;
+p {
+    text-align: center;
 }

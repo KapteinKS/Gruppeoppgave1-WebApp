@@ -21,7 +21,8 @@ namespace Gruppeoppgave1_WebApp.Models
         [Key]
         public int OrderID { get; set; }
         public string Route { get; set; }
-        public string Date { get; set; }
+        public string LeaveDate { get; set; }
+        public string HomeDate { get; set; }
         public int Price { get; set; }
         public int Passengers { get; set; }
     }

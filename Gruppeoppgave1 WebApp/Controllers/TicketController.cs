@@ -22,7 +22,8 @@ namespace Gruppeoppgave1_WebApp.Controllers
             var order = new Order()
             {
                 Route = orderedTicket.Route,
-                Date = orderedTicket.Date,
+                LeaveDate = orderedTicket.LeaveDate,
+                HomeDate = orderedTicket.HomeDate,
                 Price = orderedTicket.Price,
                 Passengers = orderedTicket.Passengers,
             };

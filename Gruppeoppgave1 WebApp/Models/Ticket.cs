@@ -9,7 +9,9 @@ namespace Gruppeoppgave1_WebApp.Models
     {
         public string Route;
 
-        public string Date;
+        public string LeaveDate;
+
+        public string HomeDate;
 
         public string FirstName;
 

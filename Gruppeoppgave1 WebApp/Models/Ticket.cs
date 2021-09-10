@@ -7,5 +7,16 @@ namespace Gruppeoppgave1_WebApp.Models
 {
     public class Ticket
     {
+        public string Route;
+
+        public string Date;
+
+        public string Name;
+
+        public string Email;
+
+        public string Phone;
+
+        public int Passengers;
     }
 }

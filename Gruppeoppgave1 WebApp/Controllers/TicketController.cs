@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Gruppeoppgave1_WebApp.Controllers
 {
-    public class MainController
+    public class TicketController
     {
     }
 }

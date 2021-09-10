@@ -22,16 +22,18 @@ namespace Gruppeoppgave1_WebApp.Controllers
             {
                 Route = orderedTicket.Route,
                 Date = orderedTicket.Date,
+                Price = orderedTicket.Price,
                 Passengers = orderedTicket.Passengers,
             };
 
-            Customer c = _db.Customers.FirstOrDefault(cus => cus.Name == orderedTicket.Name);
+            Customer c = _db.Customers.FirstOrDefault(cus => (cus.FirstName == orderedTicket.FirstName) && (cus.LastName == orderedTicket.LastName));
 
             if (c == null)
             {
                 var customer = new Customer
                 {
-                    Name = orderedTicket.Name,
+                    FirstName = orderedTicket.FirstName,
+                    LastName = orderedTicket.LastName,
                     Email = orderedTicket.Email,
                     Phone = orderedTicket.Phone
                 };
@@ -57,7 +59,8 @@ namespace Gruppeoppgave1_WebApp.Controllers
                 {
                     var anOrder = new Ticket
                     {
-                        Name = customer.Name,
+                        FirstName = customer.FirstName,
+                        LastName = customer.LastName,
                         Email = customer.Email,
                         Phone = customer.Phone,
                         Route = order.Route,

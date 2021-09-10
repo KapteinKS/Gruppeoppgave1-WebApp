@@ -8,7 +8,8 @@ namespace Gruppeoppgave1_WebApp.Models
     {
         [Key]
         public int CustomerID { get; set; }
-        public string Name { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
 
@@ -21,6 +22,7 @@ namespace Gruppeoppgave1_WebApp.Models
         public int OrderID { get; set; }
         public string Route { get; set; }
         public string Date { get; set; }
+        public int Price { get; set; }
         public int Passengers { get; set; }
     }
     public class TicketContext : DbContext

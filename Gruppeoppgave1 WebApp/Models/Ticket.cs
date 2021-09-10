@@ -11,11 +11,15 @@ namespace Gruppeoppgave1_WebApp.Models
 
         public string Date;
 
-        public string Name;
+        public string FirstName;
+
+        public string LastName;
 
         public string Email;
 
         public string Phone;
+
+        public int Price;
 
         public int Passengers;
     }

@@ -10,3 +10,8 @@ div.route_container{
 p {
     text-align: center;
 }
+
+#routes_dropdown{
+    height: 50px;
+    width: 25%;
+}

@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Gruppeoppgave1_WebApp.Models;
 
 namespace Gruppeoppgave1_WebApp.Controllers

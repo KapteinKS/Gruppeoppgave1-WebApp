@@ -1,17 +1,70 @@
 ﻿body {
 }
 
-div.route_container{
-    width: 50%;
-    height: 100px;
+header {
+    background-color: #2286c3;
+    width: 100%;
+    height: 80px;
+}
+
+
+.route_container {
+    position: relative;
+    background-color: #2286c3;
+    width: 75%;
+    height: 500px;
     margin: auto;
+    margin-top: 10%;
+    border-radius: 2px;
+    align-content: center;
 }
 
-p {
-    text-align: center;
+.route_container_separator {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    height: 50%;
+    top: 25%;
 }
 
-#routes_dropdown{
+select {
+}
+
+select:focus {
+    /*outline: none;*/
+}
+
+
+.routes_dropdown {
+    background-color: #2286c3;
+    transition: background-color 400ms;
     height: 50px;
-    width: 25%;
+    width: 350px;
+    font-size: 26px;
+    font-weight: bolder;
+    border: 1px solid;
+    border-color: white;
+    border-radius: 5px;
+    color: white;
+    margin: 0px 10px 0px 10px;
 }
+.routes_dropdown .underline{
+    width: 100%;
+}
+
+.routes_dropdown option {
+    background-color: white;
+    color: black;
+}
+
+.routes_dropdown option:focus {
+    background: lightblue;
+    outline: none;
+}
+
+.routes_dropdown:hover {
+    background-color: #006BA6;
+    transition: background-color, color, 400ms;
+}
+

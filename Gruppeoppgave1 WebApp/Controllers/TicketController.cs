@@ -67,7 +67,8 @@ namespace Gruppeoppgave1_WebApp.Controllers
                         Email = customer.Email,
                         Phone = customer.Phone,
                         Route = order.Route,
-                        Date = order.Date,
+                        LeaveDate = order.LeaveDate,
+                        HomeDate = order.HomeDate,
                         Passengers = order.Passengers
                     };
                     orders.Add(anOrder);

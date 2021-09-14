@@ -16,6 +16,7 @@ namespace Gruppeoppgave1_WebApp.Controllers
         }
 
         [HttpPost]
+        //TODO Make stuff async, add DAL
         //Method for adding an order to a new or existing customer
         public void OrderTicket(Ticket orderedTicket)
         {

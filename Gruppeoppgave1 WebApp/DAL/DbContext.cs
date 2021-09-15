@@ -26,6 +26,15 @@ namespace Gruppeoppgave1_WebApp.DAL
         public int Price { get; set; }
         public int Passengers { get; set; }
     }
+    public class Departure
+    {
+        [Key]
+        public int DepID { get; set; }
+        public string Dep_location { get; set; }
+        public string Arr_location { get; set; }
+        public string Dep_time { get; set; }
+        public string Arr_time { get; set; }
+    }
     public class TicketContext : DbContext
     {
         public TicketContext(DbContextOptions<TicketContext> options) : base(options)
@@ -34,6 +43,7 @@ namespace Gruppeoppgave1_WebApp.DAL
         }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Departure> Departures { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseLazyLoadingProxies();

@@ -10,5 +10,6 @@ namespace Gruppeoppgave1_WebApp.DAL
     {
         Task<bool> OrderTicket(Ticket orderedTicket);
         Task<List<Ticket>> GetTickets();
+        Task<List<Model.Departure>> GetDepartures();
     }
 }

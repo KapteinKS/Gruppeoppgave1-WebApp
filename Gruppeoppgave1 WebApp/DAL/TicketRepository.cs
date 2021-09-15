@@ -101,5 +101,25 @@ namespace Gruppeoppgave1_WebApp.DAL
                 return null;
             }
         }
+
+        public async Task<List<Departure>> GetDepartures()
+        {
+            try
+            {
+                List<Departure> departures = await _db.Departures.Select(d => new Departure
+                {
+                    DepID = d.DepID,
+                    Dep_location = d.Dep_location,
+                    Arr_location = d.Arr_location,
+                    Dep_time = d.Dep_time,
+                    Arr_time = d.Arr_time
+                }).ToListAsync();
+                return departures;
+            }
+            catch
+            {
+                return null;
+            }
+        }
     }
 }

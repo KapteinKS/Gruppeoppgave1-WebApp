@@ -23,7 +23,7 @@ header {
     position: relative;
     display: flex;
     justify-content: center;
-    width: 75%;
+    width: 100%;
     height: 50%;
     top: 25%;
 }
@@ -41,30 +41,43 @@ select:focus {
     transition: background-color 400ms;
     height: 50px;
     width: 350px;
-    font-size: 26px;
-    font-weight: bolder;
+    font-size: 28px;
+    font-weight: bold;
     border: 1px solid;
     border-color: white;
     border-radius: 5px;
     color: white;
-    margin: 0px 10px 0px 10px;
-}
-.routes_dropdown .underline{
-    width: 100%;
-}
-
-.routes_dropdown option {
-    background-color: white;
-    color: black;
-}
-
-.routes_dropdown option:focus {
-    background: lightblue;
-    outline: none;
+    margin: 0px 10px 0px 0px;
 }
 
 .routes_dropdown:hover {
     background-color: #006BA6;
     transition: background-color, color, 400ms;
+
 }
+
+
+.routes_dropdown option {
+    background-color: white;
+    color: black;
+    
+}
+
+.ticket_form{
+    margin: 0px 0px 0px 15%;
+}
+
+.form-separator{
+    margin: 0px 5px 5px 0px;
+}
+
+.form-separator input {
+    height: 50px;
+    border: 1px solid;
+    border-color: white;
+    border-radius: 5px;
+    font-size: 26px;
+
+}
+
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Gruppeoppgave1_WebApp.Models
+namespace Gruppeoppgave1_WebApp.Model
 {
     public class Ticket
     {

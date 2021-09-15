@@ -102,7 +102,7 @@ namespace Gruppeoppgave1_WebApp.DAL
             }
         }
 
-        public async Task<List<Departure>> GetDepartures()
+        public async Task<List<DAL.Departure>> GetDepartures()
         {
             try
             {

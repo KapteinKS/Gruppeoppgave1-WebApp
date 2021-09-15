@@ -41,13 +41,13 @@ select:focus {
     transition: background-color 400ms;
     height: 50px;
     width: 350px;
-    font-size: 26px;
-    font-weight: bolder;
+    font-size: 28px;
+    font-weight: bold;
     border: 1px solid;
     border-color: white;
     border-radius: 5px;
     color: white;
-    margin: 0px 10px 0px 10px;
+    margin: 0px 10px 0px 0px;
 }
 
 .routes_dropdown:hover {
@@ -63,6 +63,21 @@ select:focus {
     
 }
 
+.ticket_form{
+    margin: 0px 0px 0px 15%;
+}
 
+.form-separator{
+    margin: 0px 5px 5px 0px;
+}
+
+.form-separator input {
+    height: 50px;
+    border: 1px solid;
+    border-color: white;
+    border-radius: 5px;
+    font-size: 26px;
+
+}
 
 

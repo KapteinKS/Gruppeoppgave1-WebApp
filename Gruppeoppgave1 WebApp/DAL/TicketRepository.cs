@@ -21,8 +21,6 @@ namespace Gruppeoppgave1_WebApp.DAL
         {
             try
             {
-
-
                 var order = new Order()
                 {
                     Route = orderedTicket.Route,

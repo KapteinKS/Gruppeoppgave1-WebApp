@@ -12,7 +12,8 @@ header {
     position: relative;
     background-color: #2286c3;
     width: 85%;
-    height: 500px;
+    height: auto;
+    min-height: 500px;
     margin: auto;
     margin-top: 7.5%;
     border-radius: 2px;
@@ -25,11 +26,12 @@ header {
     justify-content: center;
     width: 100%;
     height: auto;
-    top: 20%;
+    padding: 5% 0px 0px 0px;
 }
 
 .route_picker{
     margin: 0px 0px 0px 20px;
+
 }
 
 
@@ -64,6 +66,7 @@ header {
 .ticket_form{
     margin: 0px 0px 0px 5%;
     width: auto;
+
     
 }
 
@@ -89,11 +92,13 @@ header {
 }
 
 
-/*  */
-@media screen and (max-width: 1470px){
+/* Bigger Screen */
+@media screen and (max-width: 1440px){
     h2{
         font-size: 24px;
     }
+
+
 
     .route_container_separator .route_picker .form-separator .routes_dropdown {
         font-size: 20px;
@@ -110,9 +115,24 @@ header {
         height: 45px;
     }
 
+
+
+}
+
+/* Normal Screen */
+@media screen and (max-width: 1024px){
+
+    .route_picker{
+
+    }
+
+    .ticket_form {
+        margin: 0px 0px 0px 20px;
+    }
+
+    .route_container_separator {
+        flex-direction: column;
+    }
 }
 
 /* Tablet */
-@media screen and (max-width: 768px){
-
-}

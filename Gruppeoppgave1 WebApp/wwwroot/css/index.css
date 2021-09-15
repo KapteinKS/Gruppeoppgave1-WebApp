@@ -11,7 +11,7 @@ header {
 .route_container {
     position: relative;
     background-color: #2286c3;
-    width: 75%;
+    width: 85%;
     height: 500px;
     margin: auto;
     margin-top: 10%;
@@ -25,7 +25,11 @@ header {
     justify-content: center;
     width: 100%;
     height: auto;
-    top: 25%;
+    top: 20%;
+}
+
+.route_picker{
+    margin: 0px 0px 0px 10px;
 }
 
 select {
@@ -40,7 +44,8 @@ select:focus {
     background-color: #2286c3;
     transition: background-color 400ms;
     height: 50px;
-    width: 350px;
+    width: auto;
+    min-width: 150px;
     font-size: 28px;
     font-weight: bold;
     border: 1px solid;
@@ -64,7 +69,9 @@ select:focus {
 }
 
 .ticket_form{
-    margin: 0px 0px 0px 15%;
+    margin: 0px 10px 0px 5%;
+    width: auto;
+    
 }
 
 .form-separator{
@@ -74,6 +81,7 @@ select:focus {
 .form-separator input {
     box-sizing: border-box;
     height: 50px;
+    width: 250px;
     padding: 0px 3px 0px 3px;
     margin: 0px 10px 0px 0px;
     border: 1px solid;
@@ -88,3 +96,30 @@ select:focus {
 }
 
 
+/*  */
+@media screen and (max-width: 1470px){
+    h2{
+        font-size: 24px;
+    }
+
+    .route_container_separator .route_picker .form-separator .routes_dropdown {
+        font-size: 20px;
+        height: 45px;
+    }
+
+    .route_container_separator .route_picker .form-separator {
+
+    }
+
+    .route_container_separator .ticket_form input {
+        font-size: 20px;
+        height: 45px;
+        width: 175px;
+    }
+
+}
+
+/* Tablet */
+@media screen and (max-width: 768px){
+
+}

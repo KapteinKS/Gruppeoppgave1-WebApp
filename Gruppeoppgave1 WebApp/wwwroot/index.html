@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Båtreiser</title>
     <script src="js/site.js"></script> <!-- Trenger vi denne? -->
     <script src="js/index.js"></script>
@@ -18,7 +19,7 @@
     <div class="route_container">
         
         <div class="route_container_separator">
-            <div>
+            <div class="route_picker">
                 <h2>Hvor skal du?</h2>
                 <div class=" form-separator">
                     <select name="routes" class="routes_dropdown">
@@ -31,19 +32,6 @@
                 <div class=" form-separator">
                     <select class="routes_dropdown">
                         <option selected>07:00 - 08:00</option>
-                        <option>08:00 - 09:00</option>
-                        <option>09:00 - 10:00</option>
-                        <option>10:00 - 11:00</option>
-                        <option>11:00 - 12:00</option>
-                        <option>12:00 - 13:00</option>
-                        <option>13:00 - 14:00</option>
-                        <option>14:00 - 15:00</option>
-                        <option>15:00 - 16:00</option>
-                        <option>16:00 - 18:00</option>
-                        <option>17:00 - 18:00</option>
-                        <option>18:00 - 19:00</option>
-                        <option>19:00 - 20:00</option>
-                        <option>20:00 - 21:00</option>
                         <option>21:00 - 22:00</option>
                         <option>22:00 - 23:00</option>
                         <option>23:00 - 00:00</option>
@@ -56,7 +44,6 @@
                 <h2>Din billett:</h2>
                 <div class="form-separator">
                     <input readonly type="text" value="Placeholder" id="route" />
-                    
                 </div>
                 <div class="form-separator">
                     <input readonly type="text" value="Placeholder" id="date"/>

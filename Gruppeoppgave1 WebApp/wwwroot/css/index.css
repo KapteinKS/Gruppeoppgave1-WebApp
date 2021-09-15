@@ -23,7 +23,7 @@ header {
     position: relative;
     display: flex;
     justify-content: center;
-    width: 75%;
+    width: 100%;
     height: 50%;
     top: 25%;
 }
@@ -49,22 +49,20 @@ select:focus {
     color: white;
     margin: 0px 10px 0px 10px;
 }
-.routes_dropdown .underline{
-    width: 100%;
-}
-
-.routes_dropdown option {
-    background-color: white;
-    color: black;
-}
-
-.routes_dropdown option:focus {
-    background: lightblue;
-    outline: none;
-}
 
 .routes_dropdown:hover {
     background-color: #006BA6;
     transition: background-color, color, 400ms;
+
 }
+
+
+.routes_dropdown option {
+    background-color: white;
+    color: black;
+    
+}
+
+
+
 

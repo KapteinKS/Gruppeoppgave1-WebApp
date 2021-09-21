@@ -23,12 +23,12 @@ namespace Gruppeoppgave1_WebApp
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public async Task Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                await InitDB.Initialize(app);
+                InitDB.Initialize(app);
             }
             
 

@@ -5,7 +5,7 @@
 });
 
 function getRoutes(departures) {
-    let out = "<select name='routes' class='routes_dropdown'>" + 
+    let out = "<select name='routes' onchange='getDepartures()' class='routes_dropdown'>" + 
         "<option selected>Pick a route</option>";
     if (departures != null) {
         for (const departure in departures) {

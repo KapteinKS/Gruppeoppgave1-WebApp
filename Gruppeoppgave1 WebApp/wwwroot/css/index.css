@@ -61,11 +61,10 @@ header {
 }
 
 
-.routes_dropdown option {
-    background-color: white;
-    color: black;
-    
-}
+    .routes_dropdown option {
+        background-color: white;
+        color: #3B4856;
+    }
 
 
 .form-separator{

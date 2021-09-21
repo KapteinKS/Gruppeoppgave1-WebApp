@@ -18,15 +18,14 @@ function getRoutes(departures) {
 
 function getDepartures() {
     const route = $("#routes").val();
-    console.log(route);
     $.get("ticket/getDepartures", function (deps) {
         let out = "<select class='routes_dropdown'>" + 
             "<option selected>Velg avreisetid</option>";
         for (const dep of deps) {
             let temp = dep.dep_location + "-" + dep.arr_location;
-            console.log(temp);
             if (temp === route) {
                 out += "<option>" + dep.dep_time + "</option >";
+                break;
             }
         }
             

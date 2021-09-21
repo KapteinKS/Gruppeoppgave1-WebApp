@@ -28,7 +28,7 @@ namespace Gruppeoppgave1_WebApp
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                InitDB.Initialize(app);
+                //InitDB.Initialize(app);
             }
             
 

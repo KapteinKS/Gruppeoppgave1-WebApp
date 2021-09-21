@@ -26,7 +26,8 @@ namespace Gruppeoppgave1_WebApp.DAL
         public int Price { get; set; }
         public int Passengers { get; set; }
     }
-    public class Departure
+
+    public class Departures
     {
         [Key]
         public int DepID { get; set; }
@@ -43,7 +44,7 @@ namespace Gruppeoppgave1_WebApp.DAL
         }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Customer> Customers { get; set; }
-        public DbSet<Departure> Departures { get; set; }
+        public DbSet<Departures> Departures { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseLazyLoadingProxies();

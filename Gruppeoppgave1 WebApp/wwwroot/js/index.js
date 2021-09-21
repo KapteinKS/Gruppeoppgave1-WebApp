@@ -5,14 +5,33 @@
 });
 
 function getRoutes(departures) {
-    let out = "<select name='routes' onchange='getDepartures()' class='routes_dropdown'>" + 
-        "<option selected>Pick a route</option>";
-    if (departures != null) {
-        for (const departure in departures) {
-            out += "<option value='" + departure.Dep_location + "-" + departure.Arr_location + "'>"
-                + departure.Dep_location + " - " + departure.Arr_location + "</option>";
-        }
+    let out = "<select id='routes' onchange='getDepartures()' class='routes_dropdown'>" + 
+        "<option selected>Velg rute</option>";
+    
+    for (let departure of departures) {            
+        out += "<option value='" + departure.dep_location + "-" + departure.arr_location + "'>"
+            + departure.dep_location + " - " + departure.arr_location + "</option>";
     }
     out += "</select>";
     $("#route_dropdown").html(out);
+}
+
+function getDepartures() {
+    const route = $("#routes").val();
+    console.log(route);
+    $.get("ticket/getDepartures", function (deps) {
+        let out = "<select class='routes_dropdown'>" + 
+            "<option selected>Velg avreisetid</option>";
+        for (const dep of deps) {
+            let temp = dep.dep_location + "-" + dep.arr_location;
+            console.log(temp);
+            if (temp === route) {
+                out += "<option>" + dep.dep_time + "</option >";
+            }
+        }
+            
+        out += "</select >";
+
+        $("#times").html(out);
+    });
 }

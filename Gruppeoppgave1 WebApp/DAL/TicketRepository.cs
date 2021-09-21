@@ -63,7 +63,6 @@ namespace Gruppeoppgave1_WebApp.DAL
         {
             try
             {
-
             List<Customer> customers = await _db.Customers.Select(c => new Customer
             {
                 CustomerID = c.CustomerID,
@@ -100,13 +99,13 @@ namespace Gruppeoppgave1_WebApp.DAL
             }
         }
 
-        public async Task<List<DAL.Departure>> GetDepartures()
+        public async Task<List<Departure>> GetDepartures()
         {
             try
             {
                 List<Departure> departures = await _db.Departures.Select(d => new Departure
                 {
-                    DepID = d.DepID,
+                    ID = d.DepID,
                     Dep_location = d.Dep_location,
                     Arr_location = d.Arr_location,
                     Dep_time = d.Dep_time,

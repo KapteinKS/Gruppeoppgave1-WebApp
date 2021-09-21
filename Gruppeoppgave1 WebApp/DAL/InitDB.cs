@@ -10,7 +10,7 @@ namespace Gruppeoppgave1_WebApp.DAL
 {
     public class InitDB
     {
-        public static async Task Initialize(IApplicationBuilder app)
+        public static void Initialize(IApplicationBuilder app)
         {
             using (var serviceScope = app.ApplicationServices.CreateScope())
             {
@@ -19,7 +19,25 @@ namespace Gruppeoppgave1_WebApp.DAL
                 context.Database.EnsureDeleted();
                 context.Database.EnsureCreated();
 
-                await context.SaveChangesAsync();
+                var departure1 = new Departures
+                {
+                    Dep_location = "Oslo",
+                    Arr_location = "Kiel",
+                    Dep_time = "14:00",
+                    Arr_time = "18:00"
+                };
+
+                var departure2 = new Departures
+                {
+                    Dep_location = "Larvik",
+                    Arr_location = "Strømstad",
+                    Dep_time = "13:30",
+                    Arr_time = "17:40"
+                };
+
+                context.Add(departure1);
+                context.Add(departure2);
+                context.SaveChanges();
             }
         }
     }

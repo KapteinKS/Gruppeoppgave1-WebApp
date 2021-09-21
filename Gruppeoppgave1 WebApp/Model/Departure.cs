@@ -7,12 +7,13 @@ namespace Gruppeoppgave1_WebApp.Model
 {
     public class Departure
     {
-        public string dep_location;
+        public int ID { get; set; }
+        public string Dep_location { get; set; }
 
-        public string arr_location;
+        public string Arr_location { get; set; }
 
-        public string dep_time;
+        public string Dep_time { get; set; }
 
-        public string arr_time;
+        public string Arr_time { get; set; }
     }
 }

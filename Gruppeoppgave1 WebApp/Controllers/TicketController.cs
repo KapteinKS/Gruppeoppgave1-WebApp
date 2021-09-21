@@ -28,7 +28,7 @@ namespace Gruppeoppgave1_WebApp.Controllers
             return await _db.GetTickets();
         }
 
-        public async Task<List<DAL.Departure>> GetDepartures()
+        public async Task<List<Departure>> GetDepartures()
         {
             return await _db.GetDepartures();
         }

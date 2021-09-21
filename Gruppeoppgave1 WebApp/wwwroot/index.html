@@ -19,23 +19,23 @@
             <div class="route_picker">
 
                 <h2>Hvor skal du?</h2>
-                <div id="route_dropdown" class=" form-separator">
-                    <!--
-                    <select name="routes" class="routes_dropdown">
-                        <option selected>Pick a route</option>
-                        <option value="Rute 1">Oslo - Sørpolen</option>
+                <div id="route_dropdown" class=" form-separator" onchange='getDates()'>
+                    <select id="routes" class="routes_dropdown">
+                        <option selected>Velg rute</option>
+                        <!--option value="Rute 1">Oslo - Sørpolen</option>
                         <option value="Rute 2">Mars - Andromeda</option>
                         <option value="Rute 3">Østkanten - Vestkanten</option>
+                        -->
 
                     </select>
-                    -->
+                    
                 </div>
 
-                <div class="form-separator">
-                    <input class="routes_dropdown" type="date"/>
+                <div id="date" class="form-separator">
+                    <!--<input class="routes_dropdown" type="date"/>-->
                 </div>
 
-                <div id="times" class=" form-separator">
+                <div id="times" class="form-separator">
                     <!--<select class="routes_dropdown">
                         <option selected>07:00 - 08:00</option>
                         <option>21:00 - 22:00</option>
@@ -44,8 +44,8 @@
                     </select>
                     -->
                 </div>
-                <div class="form-separator">
-                    <button onclick="window.location.href = 'purchase.html';" class="routes_dropdown">Neste</button>
+                <div id="nextWindow" class="form-separator">
+                    <!--<button onclick="window.location.href = 'purchase.html';" class="routes_dropdown">Neste</button>-->
                 </div>
                 
             </div>

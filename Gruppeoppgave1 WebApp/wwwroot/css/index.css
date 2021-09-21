@@ -7,6 +7,7 @@ header {
     height: 80px;
 }
 
+
 .route_container {
     position: relative;
     background-color: #2286c3;
@@ -23,9 +24,10 @@ header {
     position: relative;
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 50%;
     height: auto;
     padding: 5% 0px 0px 0px;
+    margin: auto;
 }
 
 .route_picker{
@@ -101,8 +103,8 @@ header {
         width: 250px;
     }
 
-    .route_container_separator .route_picker .form-separator {
 
+    .route_container_separator .route_picker .form-separator {
     }
 
     .route_container_separator .ticket_form input {
@@ -127,4 +129,7 @@ header {
     }
 }
 
-/* Tablet */
+/* Tablet/smaller */
+@media screen and (max-width: 700px){
+
+}

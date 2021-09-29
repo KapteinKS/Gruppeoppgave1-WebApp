@@ -57,24 +57,61 @@ function firstname() {
             "<input type='text' id='inputFirst' />" +
         "</div>" +
 
-        "<div id=\"lastname\" class=\"form - separator\">" +
+        "<div id=\"lastname\" class=\"form-separator\">" +
             "<label for='inputLast'>Etternavn:</label>" +
             "<input type='text' id='inputLast' />" +
         "</div>" + 
 
-        "<div id=\"phone\" class=\"form - separator\">" +
+        "<div id=\"phone\" class=\"form-separator\">" +
             "<label for='inputPhone'>Telefon:</label>" +
             "<input type='tel' id='inputPhone' />" +
         "</div>" +
 
-        "<div id=\"email\" class=\"form - separator\">" +
+        "<div id=\"email\" class=\"form-separator\">" +
             "<label for='inputEmail'>Epost:</label>" +
             "<input type='text' id='inputEmail' />" +
         "</div>";
+
+    let button = "<button type='button' onclick='orderTicket()'>Bestill</button>";
+    $("#confirm").html(button);
     $("#textInputs").html(out);
     $("#spacer").show();
 }
 
 function orderTicket() {
     console.log("Bestiller bilett");
+    let price = getPrice();
+    if (price !== NaN) {
+        let bilett = {
+            route: $("#routes").val(),
+            leaveDate: $("#timetable").val(),
+            homeDate: "",
+            price: price,
+            firstname: $("#firstname").val(),
+            lastname: $("#lastname").val(),
+            email: $("#email").val(),
+            phone: $("#phone").val(),
+            passengers: $("#amPassengers").val()
+        };
+
+        $.get("ticket/orderTicket", bilett, function (janei) {
+            console.log(janei);
+        });
+    } else {
+        console.log("Could not order ticket");
+    }
+}
+
+function getPrice() {
+    $.get("ticket/getDepartures", function (deps) {
+        const route = $("#routes").val();
+        for (const dep of deps) {
+            let temp = dep.dep_location + "-" + dep.arr_location;
+            if (temp === route) {
+                console.log("Price: " + dep.price);
+                return dep.price;
+            }
+        }
+        return NaN;
+    });
 }

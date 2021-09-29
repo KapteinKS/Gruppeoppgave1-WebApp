@@ -7,15 +7,21 @@ header {
     height: 80px;
 }
 
+.page_heading {
+    font-size: 84px;
+    color: #2286c3;
+    text-align: center;
+    margin-top: 3.5%;
+}
 
 .route_container {
     position: relative;
     background-color: #2286c3;
     width: 85%;
     height: auto;
-    min-height: 500px;
+    min-height: 650px;
     margin: auto;
-    margin-top: 7.5%;
+    margin-top: 3.5%;
     border-radius: 2px;
     align-content: center;
 }
@@ -35,7 +41,7 @@ header {
 }
 .ticket_form {
     margin: 0px 0px 0px 5%;
-    width: auto;
+    
 }
 
 

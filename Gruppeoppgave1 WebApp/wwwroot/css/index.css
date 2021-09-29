@@ -49,7 +49,7 @@ header {
     background-color: #2286c3;
     transition: background-color 400ms;
     height: 50px;
-    width: 300px;
+    width: 325px;
     min-width: 150px;
     font-size: 28px;
     font-weight: bold;
@@ -73,7 +73,7 @@ header {
 }
 
 .routes_input{
-    width: 300px;
+    width: 325px;
 
 }
 
@@ -101,29 +101,27 @@ header {
 
 /* Bigger Screen */
 @media screen and (max-width: 1440px){
-    h2{
-        font-size: 24px;
-    }
-
-
-
     .route_container_separator .route_picker .form-separator .routes_dropdown {
-        font-size: 20px;
+        font-size: 24px;
         height: 45px;
-        width: 250px;
+        width: 300px;
     }
 
 
-    .route_container_separator .route_picker .form-separator {
+    .route_container_separator .route_picker .form-separator .routes_input {
+        font-size: 24px;
+        height: 45px;
+        width: 300px;
     }
 
-    .route_container_separator .ticket_form input {
-        font-size: 20px;
+    .route_container_separator .ticket_form .form-separator .routes_input {
+        font-size: 24px;
         height: 45px;
+        width: 300px;
     }
 }
 
-/* Normal Screen */
+/* Normal Screen *//*
 @media screen and (max-width: 1024px){
 
     .route_picker{
@@ -140,6 +138,13 @@ header {
 }
 
 /* Tablet/smaller */
-@media screen and (max-width: 700px){
+@media screen and (max-width: 768px){
+
+    .route_picker {
+        margin-top: 20px;
+    }
+    .route_container_separator {
+        flex-direction: column;
+    }
 
 }

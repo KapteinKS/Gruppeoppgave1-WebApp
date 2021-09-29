@@ -68,11 +68,14 @@ function firstname() {
         "<div class=\"form-separator\">" +
             "<label for='inputEmail'>Epost:</label>" +
             "<input type='email' id='inputEmail' class='routes_input' />" +
-        "</div>";
+        "</div>" +
 
-    let button = "<button type='button' onclick='orderTicket()'>Bestill</button>";
-    $("#confirm").html(button);
+        "<div id=\"confirm\" class=\"form-separator\">" +
+        "</div>"
+
+    let button = "<button type='button' class='routes_dropdown order-button' onclick='orderTicket()'>Bestill</button>";
     $("#textInputs").html(out);
+    $("#confirm").html(button);
     $("#spacer").show();
 }
 

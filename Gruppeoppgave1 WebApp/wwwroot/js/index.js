@@ -18,7 +18,7 @@ function getRoutes(departures) {
 
 
 function getDates() {
-    let out = "<labe for='timetable'>Reisedato</label>" +
+    let out = "<label for='timetable'>Reisedato</label>" +
         "<input id='timetable' class=\"routes_dropdown\" type=\"date\" onchange=\"getDepartures()\"/>";
     $("#date").html(out);
 }
@@ -46,12 +46,35 @@ function getDepartures() {
 
 function passengers() {
     let out = "<label for='travelers'>Hvor mange reisende?</label>" +
-        "<input type='number' class='routes_input' id='travelers'/ onChange='nextWindow()'>";
+        "<input type='number' class='routes_input' id='travelers'/ onChange='firstname()'>";
     $("#amPassengers").html(out);
 }
 
-function nextWindow() {
-    //<button onclick="window.location.href = 'purchase.html';" class="routes_dropdown">Neste</button>
-    let out = "<button onclick=\"window.location.href = \'purchase.html\';\" class=\"routes_dropdown\">Neste</button>";
-    $("#nextWindow").html(out);
+function firstname() {
+    let out =
+        "<div id=\"firstname\" class=\"form-separator\">" +
+            "<label for='inputFirst'>Fornavn:</label>" +
+            "<input type='text' id='inputFirst' />" +
+        "</div>" +
+
+        "<div id=\"lastname\" class=\"form - separator\">" +
+            "<label for='inputLast'>Etternavn:</label>" +
+            "<input type='text' id='inputLast' />" +
+        "</div>" + 
+
+        "<div id=\"phone\" class=\"form - separator\">" +
+            "<label for='inputPhone'>Telefon:</label>" +
+            "<input type='tel' id='inputPhone' />" +
+        "</div>" +
+
+        "<div id=\"email\" class=\"form - separator\">" +
+            "<label for='inputEmail'>Epost:</label>" +
+            "<input type='text' id='inputEmail' />" +
+        "</div>";
+    $("#textInputs").html(out);
+    $("#spacer").show();
+}
+
+function orderTicket() {
+    console.log("Bestiller bilett");
 }

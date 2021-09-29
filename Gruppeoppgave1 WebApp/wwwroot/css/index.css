@@ -77,7 +77,6 @@ header {
 
 }
 
-
 .form-separator{
     margin: 0px 10px 14px 0px;
 }
@@ -91,6 +90,10 @@ header {
     border-color: white;
     border-radius: 5px;
     font-size: 26px;
+}
+
+#fornavn-label {
+    margin-top: 48px;
 }
 
 /* Inverts date picker calendar colour from black to white */
@@ -141,10 +144,14 @@ header {
 @media screen and (max-width: 768px){
 
     .route_picker {
-        margin-top: 20px;
+        margin-top: 16px;
     }
     .route_container_separator {
         flex-direction: column;
+    }
+
+    #fornavn-label{
+        margin-top: 0px;
     }
 
 }

@@ -28,13 +28,34 @@ namespace Gruppeoppgave1_WebApp.DAL
                     LeaveDate = orderedTicket.LeaveDate,
                     HomeDate = orderedTicket.HomeDate,
                     Price = orderedTicket.Price,
-                    Passengers = orderedTicket.Passengers,
+                    Passengers = orderedTicket.Passengers
                 };
 
-                Customer c = await _db.Customers.FindAsync(orderedTicket.Email);
+                string email = orderedTicket.Email;
+                List<Customer> customers = await _db.Customers.Select(c => new Customer
+                {
+                    CustomerID = c.CustomerID,
+                    FirstName = c.FirstName,
+                    LastName = c.LastName,
+                    Email = c.Email,
+                    Phone = c.Phone,
+                    Orders = c.Orders
+                }).ToListAsync();
 
+                Customer c = null;
+                foreach(Customer customer in customers)
+                {
+                    if (customer.Email.Equals(orderedTicket.Email))
+                    {
+                        c = customer;
+                        break;
+                    }
+                }
+                
                 if (c == null)
                 {
+                    Console.WriteLine("New customer");
+                    
                     var customer = new Customer
                     {
                         FirstName = orderedTicket.FirstName,
@@ -48,6 +69,7 @@ namespace Gruppeoppgave1_WebApp.DAL
                 }
                 else
                 {
+                    Console.WriteLine("Existing customer");
                     c.Orders.Add(order);
                 }
                 await _db.SaveChangesAsync();
@@ -55,6 +77,7 @@ namespace Gruppeoppgave1_WebApp.DAL
             }
             catch
             {
+                Console.WriteLine("CRASH");
                 return false;
             }
         }

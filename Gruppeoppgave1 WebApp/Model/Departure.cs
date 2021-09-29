@@ -15,5 +15,6 @@ namespace Gruppeoppgave1_WebApp.Model
         public string Dep_time { get; set; }
 
         public string Arr_time { get; set; }
+        public int Price { get; set; }
     }
 }

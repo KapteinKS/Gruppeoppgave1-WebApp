@@ -24,7 +24,8 @@ namespace Gruppeoppgave1_WebApp.DAL
                     Dep_location = "Oslo",
                     Arr_location = "Kiel",
                     Dep_time = "14:00",
-                    Arr_time = "18:00"
+                    Arr_time = "18:00",
+                    Price = 128
                 };
 
                 var departure2 = new Departures
@@ -32,7 +33,8 @@ namespace Gruppeoppgave1_WebApp.DAL
                     Dep_location = "Larvik",
                     Arr_location = "Strømstad",
                     Dep_time = "13:30",
-                    Arr_time = "17:40"
+                    Arr_time = "17:40",
+                    Price = 256
                 };
 
                 context.Add(departure1);

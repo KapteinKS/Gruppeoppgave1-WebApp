@@ -4,6 +4,7 @@ using System.Linq;
 using Gruppeoppgave1_WebApp.Model;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Gruppeoppgave1_WebApp.DAL
 {
@@ -109,7 +110,8 @@ namespace Gruppeoppgave1_WebApp.DAL
                     Dep_location = d.Dep_location,
                     Arr_location = d.Arr_location,
                     Dep_time = d.Dep_time,
-                    Arr_time = d.Arr_time
+                    Arr_time = d.Arr_time,
+                    Price = d.Price
                 }).ToListAsync();
                 return departures;
             }

@@ -35,6 +35,7 @@ namespace Gruppeoppgave1_WebApp.DAL
         public string Arr_location { get; set; }
         public string Dep_time { get; set; }
         public string Arr_time { get; set; }
+        public int Price { get; set; }
     }
     public class TicketContext : DbContext
     {

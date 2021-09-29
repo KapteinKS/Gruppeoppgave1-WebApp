@@ -90,6 +90,11 @@ header {
     border-color: white;
     border-radius: 5px;
     font-size: 26px;
+    color: #3B4856;
+}
+
+#date input{
+    color: white;
 }
 
 #fornavn-label {

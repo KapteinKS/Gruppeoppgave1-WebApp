@@ -16,10 +16,11 @@ header {
 
 .route_container {
     position: relative;
+    justify-content: center;
     background-color: #2286c3;
     width: 85%;
     height: auto;
-    min-height: 650px;
+    min-height: 675px;
     margin: auto;
     margin-top: 3.5%;
     border-radius: 2px;
@@ -37,11 +38,12 @@ header {
 }
 
 .route_picker{
-    margin: 0px 0px 0px 20px;
+    margin: 0px 0px 0px 0px;
+    min-width: 375px;
 }
 .ticket_form {
-    margin: 0px 0px 0px 5%;
-    
+    margin: 0px 0px 0px 0px;
+    min-width: 375px;
 }
 
 
@@ -57,7 +59,6 @@ header {
     border-color: white;
     border-radius: 5px;
     color: white;
-    margin: 0px 10px 0px 0px;
 }
 
 .routes_dropdown:hover {
@@ -78,7 +79,7 @@ header {
 }
 
 .form-separator{
-    margin: 0px 10px 14px 0px;
+    margin: 0px 0px 14px 0px;
 }
 
 .form-separator input {
@@ -102,7 +103,7 @@ header {
 }
 
 .order-button {
-    margin-top: 8px;
+    margin-top: 10px;
     background-color: #05a95a;
     border-color: #2B303A;
 }
@@ -115,6 +116,14 @@ header {
 
 /* Bigger Screen */
 @media screen and (max-width: 1440px){
+
+    .ticket_form{
+        min-width: 340px;
+    }
+    .route_picker{
+        min-width: 340px;
+    }
+
     .route_container_separator .route_picker .form-separator .routes_dropdown {
         font-size: 24px;
         height: 45px;
@@ -141,32 +150,34 @@ header {
     }
 }
 
-/* Normal Screen *//*
+/* Normal Screen */
 @media screen and (max-width: 1024px){
 
     .route_picker{
-
+        min-width: 315px;
+        margin-right: 10px;
     }
 
     .ticket_form {
-        margin: 0px 0px 0px 20px;
+        min-width: 315px;
+        margin-left: 10px;
     }
 
-    .route_container_separator {
-        flex-direction: column;
-    }
 }
 
 /* Tablet/smaller */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 800px){
     .route_picker {
         margin-left: 0;
         margin-top: 16px;
         margin: 16px auto 0px auto;
+        padding-right: 0px;
     }
     .ticket_form{
         margin-left: auto;
         margin-right: auto;
+        padding-left: 0px;
+
     }
 
 
@@ -179,4 +190,23 @@ header {
         margin-top: 0px;
     }
 
+}
+
+@media screen and (max-width: 425px) {
+
+    header{
+        height: 40px;
+    }
+
+    .page_heading{
+        font-size: 64px;
+    }
+
+    .route_container{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
 }

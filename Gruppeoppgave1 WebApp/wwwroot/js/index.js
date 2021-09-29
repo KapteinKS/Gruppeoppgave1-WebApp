@@ -72,7 +72,7 @@ function firstname() {
             "<input type='text' id='inputEmail' class='routes_input' />" +
         "</div>";
 
-    let button = "<button type='button' onclick='orderTicket()'>Bestill</button>";
+    let button = "<button type='button' class='routes_dropdown order-button' onclick='orderTicket()'>Bestill</button>";
     $("#confirm").html(button);
     $("#textInputs").html(out);
     $("#spacer").show();

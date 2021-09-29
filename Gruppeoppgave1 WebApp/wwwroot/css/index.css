@@ -101,6 +101,12 @@ header {
     margin-top: 48px;
 }
 
+.order-button {
+    margin-top: 8px;
+    background-color: #05a95a;
+    border-color: #2B303A;
+}
+
 /* Inverts date picker calendar colour from black to white */
 .form-separator input[type=date]::-webkit-calendar-picker-indicator {
     filter: invert(100%);

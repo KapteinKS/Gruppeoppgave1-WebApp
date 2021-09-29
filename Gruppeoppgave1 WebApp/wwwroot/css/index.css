@@ -133,6 +133,12 @@ header {
         height: 45px;
         width: 300px;
     }
+
+    .order-button{
+        font-size: 24px;
+        height: 45px;
+        width: 300px;
+    }
 }
 
 /* Normal Screen *//*
@@ -153,12 +159,20 @@ header {
 
 /* Tablet/smaller */
 @media screen and (max-width: 768px){
-
     .route_picker {
+        margin-left: 0;
         margin-top: 16px;
+        margin: 16px auto 0px auto;
     }
+    .ticket_form{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
     .route_container_separator {
         flex-direction: column;
+        width: 100%;
     }
 
     #fornavn-label{

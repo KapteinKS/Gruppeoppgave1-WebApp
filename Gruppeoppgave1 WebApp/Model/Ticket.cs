@@ -20,9 +20,10 @@ namespace Gruppeoppgave1_WebApp.Model
         [RegularExpression(@"^[0-9a-zA-ZæøåÆØÅ. \-]{2,50}$")]
         public string LastName { get; set; }
 
-        [RegularExpression(@"/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/")]
+        [RegularExpression(@"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$")]
         public string Email { get; set; }
-        
+
+        [RegularExpression(@"^[0-9]{8}$")]
         public string Phone { get; set; }
 
         public int Price { get; set; }

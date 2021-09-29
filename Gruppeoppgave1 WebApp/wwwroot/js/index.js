@@ -25,7 +25,7 @@ function getDepartures() {
     const route = $("#routes").val();
     console.log(route);
     $.get("ticket/getDepartures", function (deps) {
-        let out = "<select class='routes_dropdown' onchange='nextWindow()'>" + 
+        let out = "<select class='routes_dropdown' onchange='passengers()'>" + 
             "<option>Velg avreisetid</option>";
         for (const dep of deps) {
             let temp = dep.dep_location + "-" + dep.arr_location;
@@ -39,6 +39,12 @@ function getDepartures() {
 
         $("#times").html(out);
     });
+}
+
+function passengers() {
+    let out = "<label for='travelers'>Hvor mange reisende?</label>" +
+        "<input type='number' id='travelers'/ onChange='nextWindow()'>";
+    $("#amPassengers").html(out);
 }
 
 function nextWindow() {

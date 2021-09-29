@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,22 +8,25 @@ namespace Gruppeoppgave1_WebApp.Model
 {
     public class Ticket
     {
-        public string Route;
+        public string Route { get; set; }
 
-        public string LeaveDate;
+        public string LeaveDate { get; set; }
 
-        public string HomeDate;
+        public string HomeDate { get; set; }
 
-        public string FirstName;
+        [RegularExpression(@"^[a-zA-ZæøåÆØÅ. \-]{2,20}$")]
+        public string FirstName { get; set; }
 
-        public string LastName;
+        [RegularExpression(@"^[0-9a-zA-ZæøåÆØÅ. \-]{2,50}$")]
+        public string LastName { get; set; }
 
-        public string Email;
+        [RegularExpression(@"/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/")]
+        public string Email { get; set; }
+        
+        public string Phone { get; set; }
 
-        public string Phone;
+        public int Price { get; set; }
 
-        public int Price;
-
-        public int Passengers;
+        public int Passengers { get; set; }
     }
 }

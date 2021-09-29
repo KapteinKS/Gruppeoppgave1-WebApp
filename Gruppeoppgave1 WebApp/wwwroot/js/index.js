@@ -53,23 +53,23 @@ function passengers() {
 function firstname() {
     let out =
         "<div id=\"firstname\" class=\"form-separator\">" +
-            "<label for='inputFirst'>Fornavn:</label>" +
-            "<input type='text' id='inputFirst' />" +
+            "<label id='fornavn-label' for='inputFirst'>Fornavn:</label>" +
+            "<input type='text' id='inputFirst' class='routes_input' />" +
         "</div>" +
 
         "<div id=\"lastname\" class=\"form-separator\">" +
             "<label for='inputLast'>Etternavn:</label>" +
-            "<input type='text' id='inputLast' />" +
+            "<input type='text' id='inputLast' class='routes_input' />" +
         "</div>" + 
 
         "<div id=\"phone\" class=\"form-separator\">" +
             "<label for='inputPhone'>Telefon:</label>" +
-            "<input type='tel' id='inputPhone' />" +
+            "<input type='tel' id='inputPhone' class='routes_input' />" +
         "</div>" +
 
         "<div id=\"email\" class=\"form-separator\">" +
             "<label for='inputEmail'>Epost:</label>" +
-            "<input type='text' id='inputEmail' />" +
+            "<input type='text' id='inputEmail' class='routes_input' />" +
         "</div>";
 
     let button = "<button type='button' onclick='orderTicket()'>Bestill</button>";

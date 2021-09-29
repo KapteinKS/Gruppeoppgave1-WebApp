@@ -43,7 +43,7 @@ function getDepartures() {
 
 function passengers() {
     let out = "<label for='travelers'>Hvor mange reisende?</label>" +
-        "<input type='number' id='travelers'/ onChange='nextWindow()'>";
+        "<input type='number' class='routes_input' id='travelers'/ onChange='nextWindow()'>";
     $("#amPassengers").html(out);
 }
 

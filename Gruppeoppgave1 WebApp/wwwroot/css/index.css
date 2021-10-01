@@ -6,8 +6,10 @@
     background-image: url('../pictures/Toppbilde-2000x1124.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 50% calc(50% - 200px);
     padding: 0px 0px 100px 0px;
     width: 100%;
+    min-height: 1300px;
     height: auto;
 }
 
@@ -28,7 +30,7 @@ footer {
 
 .page_heading {
     font-size: 84px;
-    color: #2286c3;
+    color: white;
     text-align: center;
     margin-top: 1.0%;
     margin-bottom: 1.5%;
@@ -40,7 +42,7 @@ footer {
     background-color: #2286c3;
     width: 85%;
     height: auto;
-    min-height: 600px;
+    min-height: 675px;
     max-width: 1010px;
     margin: auto;
     border-radius: 20px;
@@ -52,7 +54,7 @@ footer {
     position: relative;
     display: flex;
     justify-content: center;
-    width: 50%;
+    width: 80%;
     height: auto;
     padding: 5% 0px 0px 0px;
     margin: auto;
@@ -61,11 +63,28 @@ footer {
 .route_picker{
     margin: 0px 0px 0px 0px;
     min-width: 375px;
+    height: 530px;
 }
 .ticket_form {
     margin: 0px 0px 0px 0px;
     min-width: 375px;
+    height: 530px;
 }
+.route_price_error_wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+.price_error_container {
+    margin: 0px 0px 0px 0px;
+    min-width: 375px;
+    height: auto;
+}
+
 
 
 .routes_dropdown {
@@ -129,6 +148,10 @@ footer {
     border-color: #2B303A;
 }
 
+.form_error {
+    color: #5f2020;
+}
+
 /* Inverts date picker calendar colour from black to white */
 .form-separator input[type=date]::-webkit-calendar-picker-indicator {
     filter: invert(100%);
@@ -142,6 +165,10 @@ footer {
         min-width: 340px;
     }
     .route_picker{
+        min-width: 340px;
+    }
+
+    .price_error_container {
         min-width: 340px;
     }
 

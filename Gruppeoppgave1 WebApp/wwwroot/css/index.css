@@ -1,4 +1,6 @@
 ﻿body {
+    background-image: url('../pictures/Toppbilde-2000x1124.jpg');
+    background-size: cover;
 }
 
 header {
@@ -23,7 +25,7 @@ header {
     width: 85%;
     height: auto;
     min-height: 675px;
-    max-width: 1210px;
+    max-width: 1010px;
     margin: auto;
     border-radius: 2px;
     align-content: center;

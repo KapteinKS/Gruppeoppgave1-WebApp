@@ -104,7 +104,8 @@ namespace Gruppeoppgave1_WebApp.DAL
                             Route = order.Route,
                             LeaveDate = order.LeaveDate,
                             HomeDate = order.HomeDate,
-                            Passengers = order.Passengers
+                            Passengers = order.Passengers,
+                            Price = order.Price
                         };
                         orders.Add(anOrder);
                     }

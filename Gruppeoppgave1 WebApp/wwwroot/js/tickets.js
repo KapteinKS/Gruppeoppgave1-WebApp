@@ -16,7 +16,6 @@ function formatTickets(tickets) {
 
     // *#¤!ing *"#&Y hvorfor er det i det hele tatt et alternativ å bruke for x in noe når det ikke funker
     for (let ticket of tickets) {
-        console.log(ticket);
         out += "<tr>" +
             "<td>" + ticket.route + "</td>" +
             "<td>" + ticket.leaveDate + "</td>" +

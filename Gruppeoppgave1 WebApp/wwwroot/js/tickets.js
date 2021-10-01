@@ -8,6 +8,7 @@ function getTickets() {
     });
 }
 
+//filling the tickets into a table to display them
 function formatTickets(tickets) {
     let out = "<table class='table table-striped'>" +
         "<tr>" +

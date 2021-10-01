@@ -4,6 +4,7 @@
     });
 });
 
+//this method gets all routes
 function getRoutes(departures) {
     let out = "<option selected>Velg rute</option>";
     /*"<select id='routes' onchange='getDepartures()' class='routes_dropdown'>" +
@@ -17,12 +18,14 @@ function getRoutes(departures) {
 }
 
 
+//this method adds a datepicker for when the customer wants to leave
 function getDates() {
     let out = "<label for='timetable'>Reisedato</label>" +
         "<input id='timetable' class=\"routes_dropdown\" type=\"date\" onchange=\"getDepartures()\"/>";
     $("#date").html(out);
 }
 
+//this method adds a select for the time of departure, not really used in this version, as we've decided each boat leaves daily, at the same time
 function getDepartures() {
     const route = $("#routes").val();
     $.get("ticket/getDepartures", function (deps) {
@@ -42,12 +45,14 @@ function getDepartures() {
     });
 }
 
+//this method adds an input field for the amount of tickets you're ordering at the same time
 function passengers() {
     let out = "<label for='travelers'>Hvor mange reisende?</label>" +
         "<input id='pass' type='number' class='routes_input' id='travelers'/ onChange='firstname()'>";
     $("#amPassengers").html(out);
 }
 
+//this method adds input fields for first and last name, phone and email
 function firstname() {
     let out =
         "<div class=\"form-separator\">" +
@@ -79,10 +84,13 @@ function firstname() {
     $("#spacer").show();
 }
 
+//this method creates and orders a ticket for x amount of passengers, will soon also include input validation
 function orderTicket() {
     var pricePer = 0;
     $.get("ticket/getDepartures", function (deps) {
         const route = $("#routes").val();
+
+        //finding price per passenger for the route
         for (const dep of deps) {
             let temp = dep.dep_location + "-" + dep.arr_location;
             if (temp === route) {
@@ -90,9 +98,11 @@ function orderTicket() {
                 break;
             }
         }
-        
+
+        //finding amount of passengers, and multiplying price for total price
         var passengers = $("#pass").val();
         var price = pricePer * passengers;
+        //creating the ticket
         if (!isNaN(price)) {
             let bilett = {
                 Route: $("#routes").val(),
@@ -106,9 +116,10 @@ function orderTicket() {
                 Passengers: passengers
             };
 
+            //placing the order, and changing window
             $.get("ticket/orderTicket", bilett, function (janei) {
                 console.log(janei);
-                window.location.href = "purchase.html";
+                window.location.href = "listTickets.html";
             });
             
         } else {

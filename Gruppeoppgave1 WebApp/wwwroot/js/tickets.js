@@ -13,8 +13,9 @@ function formatTickets(tickets) {
         "<tr>" +
         "<th>Strekning</th><th>Dato</th><th>E-post</th><th>Fornavn</th><th>Etternavn</th><th>Antall passasjerer</th><th>Totalpris</th>" +
         "</tr>";
-    
-    for (let ticket in tickets) {
+
+    // *#¤!ing *"#&Y hvorfor er det i det hele tatt et alternativ å bruke for x in noe når det ikke funker
+    for (let ticket of tickets) {
         console.log(ticket);
         out += "<tr>" +
             "<td>" + ticket.route + "</td>" +

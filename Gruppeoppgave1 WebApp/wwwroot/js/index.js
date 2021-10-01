@@ -108,7 +108,9 @@ function orderTicket() {
 
             $.get("ticket/orderTicket", bilett, function (janei) {
                 console.log(janei);
+                window.location.href = "purchase.html";
             });
+            
         } else {
             console.log("Could not order ticket");
         }

@@ -13,48 +13,46 @@
     <link href="css/globals.css" rel="stylesheet" />
 </head>
 <body>
-    <header></header>
+    <div class="page_wrapper">
+        <header></header>
+        <h1 class="page_heading">FjordLinja</h1>
 
-    <h1 class="page_heading">FjordLinja</h1>
+        <div class="route_container">
+            <div class="route_container_separator">
+                <div class="route_picker">
 
-    <div class="route_container">
-        <div class="route_container_separator">
-            <div class="route_picker">
+                    <h2>Hvor skal du?</h2>
+                    <div id="route_dropdown" class=" form-separator" onchange='getDates()'>
+                        <label for="routes">Strekning</label>
+                        <select id="routes" class="routes_dropdown">
+                            <option selected>Velg rute</option>
+                        </select>
+                    </div>
 
-                <h2>Hvor skal du?</h2>
-                <div id="route_dropdown" class=" form-separator" onchange='getDates()'>
-                    <label for="routes">Strekning</label>
-                    <select id="routes" class="routes_dropdown">
-                        <option selected>Velg rute</option>
-                    </select>
-                </div>
+                    <div id="date" class="form-separator">
+                        <!--Dynamically filled in-->
+                    </div>
 
-                <div id="date" class="form-separator">
-                    <!--Dynamically filled in-->
-                </div>
+                    <div id="times" class="form-separator">
+                        <!--Dynamically filled in-->
+                    </div>
 
-                <div id="times" class="form-separator">
-                    <!--Dynamically filled in-->
-                </div>
+                    <div id="amPassengers" class="form-separator">
+                        <!--Dynamically filled in-->
+                    </div>
 
-                <div id="amPassengers" class="form-separator">
-                    <!--Dynamically filled in-->
-                </div>
 
                 <button type="button" onclick="window.location.href='purchase.html'" class="routes_dropdown order-button">Se bestillinger</button>
 
+                </div>
+
+                <div id="textInputs" class="ticket_form">
+                </div>
             </div>
-
-            <div id="textInputs" class="ticket_form">
-
-
-
-            </div>
-
-   
         </div>
-
     </div>
+    <footer>
+    </footer>
 
     <!-- Must be on bottom for Bootstrap to work properly-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>

@@ -49,3 +49,7 @@ function validatePhone(phone) {
         return true; 
     }
 }
+
+function nothing(){
+    return
+}

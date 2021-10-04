@@ -12,7 +12,7 @@ function getTickets() {
 function formatTickets(tickets) {
     let out = "<table class='table table-striped ticket_table'>" +
         "<tr>" +
-        "<th>Strekning</th><th>Dato</th><th>E-post</th><th>Fornavn</th><th>Etternavn</th><th>Antall passasjerer</th><th>Totalpris</th>" +
+        "<th>Strekning</th><th>Dato</th><th>E-post</th><th>Fornavn</th><th>Etternavn</th><th>Passasjerer</th><th>Totalpris</th>" +
         "</tr>";
 
     // *#¤!ing *"#&Y hvorfor er det i det hele tatt et alternativ å bruke for x in noe når det ikke funker

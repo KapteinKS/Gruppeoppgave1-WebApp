@@ -1,7 +1,22 @@
 ﻿body {
 }
 
-.route_container_separator {
+
+.ticket_table_container {
+    position: relative;
+    justify-content: center;
+    background-color: #2286c3;
+    width: 90%;
+    height: auto;
+    min-height: 675px;
+    max-width: 1210px;
+    margin: auto;
+    border-radius: 20px;
+    align-content: center;
+    box-shadow: grey 5px 5px 50px -20px;
+}
+
+.ticket_formater_helper {
     position: relative;
     display: flex;
     justify-content: center;
@@ -11,11 +26,46 @@
     margin: auto;
 }
 
-.ticket_table th{
+.ticket_table th {
     color: white;
-
+    background-color: #05a95a;
+    font-size: 16px;
+    border-top: 2px solid #2B303A;
+    border-bottom: 2px solid #2B303A;
 }
 
 .ticket_table td {
     color: white;
+    font-size: 14px;
+    border-bottom: 1px solid white;
+}
+
+
+/* Bigger Screen */
+@media screen and (max-width: 1440px) {
+
+}
+/* Normal Screen */
+@media screen and (max-width: 1024px) {
+
+}
+/* Tablet/smaller */
+@media screen and (max-width: 800px) {
+    .ticket_table_container{
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .ticket_table th{
+        font-size: 12px;
+    }
+    .ticket_table td{
+        font-size: 12px;
+    }
+
+}
+@media screen and (max-width: 425px) {
+
+}
+@media screen and (max-width: 320px) {
 }

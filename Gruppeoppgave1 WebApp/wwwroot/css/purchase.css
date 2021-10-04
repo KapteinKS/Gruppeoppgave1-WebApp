@@ -1,2 +1,21 @@
 ﻿body {
 }
+
+.route_container_separator {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: auto;
+    padding: 5% 0px 0px 0px;
+    margin: auto;
+}
+
+.ticket_table th{
+    color: white;
+
+}
+
+.ticket_table td {
+    color: white;
+}

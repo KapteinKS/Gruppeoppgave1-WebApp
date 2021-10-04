@@ -10,7 +10,7 @@ function getTickets() {
 
 //filling the tickets into a table to display them
 function formatTickets(tickets) {
-    let out = "<table class='table table-striped'>" +
+    let out = "<table class='table table-striped ticket_table'>" +
         "<tr>" +
         "<th>Strekning</th><th>Dato</th><th>E-post</th><th>Fornavn</th><th>Etternavn</th><th>Antall passasjerer</th><th>Totalpris</th>" +
         "</tr>";

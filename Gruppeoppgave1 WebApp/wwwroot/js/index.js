@@ -91,22 +91,22 @@ function firstname() {
         let out =
             "<div class=\"form-separator\">" +
             "<label id='fornavn-label' for='inputFirst'>Fornavn:</label>" +
-            "<input  type='text' id='inputFirst' class='routes_input' />" +
+            "<input onchange='validateFirstname(this.value)' type='text' id='inputFirst' class='routes_input' />" +
             "</div>" +
 
             "<div class=\"form-separator\">" +
             "<label for='inputLast'>Etternavn:</label>" +
-            "<input type='text' id='inputLast' class='routes_input' />" +
+            "<input onchange='validateLastname(this.value)' type='text' id='inputLast' class='routes_input' />" +
             "</div>" +
 
             "<div class=\"form-separator\">" +
             "<label for='inputPhone'>Telefon:</label>" +
-            "<input type='tel' id='inputPhone' class='routes_input' />" +
+            "<input onchange='validateEmail(this.value)' type='tel' id='inputPhone' class='routes_input' />" +
             "</div>" +
 
             "<div class=\"form-separator\">" +
             "<label for='inputEmail'>Epost:</label>" +
-            "<input type='email' id='inputEmail' class='routes_input' />" +
+            "<input onchange='validatePhone(this.value)' type='email' id='inputEmail' class='routes_input' />" +
             "</div>" +
 
             "<div id=\"confirm\" class=\"form-separator\">" +

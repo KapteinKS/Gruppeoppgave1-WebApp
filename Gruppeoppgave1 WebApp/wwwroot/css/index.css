@@ -82,6 +82,7 @@ footer {
     margin: 0px 0px 0px 0px;
     min-width: 375px;
     height: auto;
+    min-height: 145px;
 }
 
 

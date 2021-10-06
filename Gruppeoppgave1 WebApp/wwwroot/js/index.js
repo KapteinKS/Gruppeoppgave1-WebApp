@@ -158,7 +158,9 @@ function orderTicket() {
                     console.log(janei);
                     window.location.href = "listTickets.html";
                 });
+                alert("Din bilett er bestilt!");
             } else {
+                alert("Feil ble oppdaget i inputfelt!");
                 console.log("Wrong input detected");
             }
 
@@ -168,7 +170,6 @@ function orderTicket() {
     });
  };
     
-
 function valider() {
     const routeOK = validateRoute($("#route").val());
     const dateOK = validateDate($("#timetable").val());

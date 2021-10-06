@@ -83,7 +83,7 @@ function validateEmail(email) {
     const regexp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
     const ok = regexp.test(email);
     if (!ok) {
-        $("#wrongEmail").html("Email er ikke gyldig");
+        $("#wrongEmail").html("Epost er ikke gyldig");
         $("#inputEmail").css({ "border-color": "red" });
         return false;
     }

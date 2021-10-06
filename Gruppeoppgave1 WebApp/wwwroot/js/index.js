@@ -20,6 +20,7 @@ function getRoutes(departures) {
 
 //this method adds a datepicker for when the customer wants to leave
 function getDates() {
+    validateRoute($("#routes").val());
     var today = new Date();
     var dd = today.getDate();
     var mm = today.getMonth() + 1; //January is 0 so need to add 1 to make it 1!
@@ -34,9 +35,13 @@ function getDates() {
     today = yyyy + '-' + mm + '-' + dd;
     let out = "<label for='timetable'>Reisedato</label>" +
         //making sure people can't order in the past and not too far in the future
-        "<input id='timetable' class=\"routes_dropdown\" type=\"date\" min=\"" + today + "\" max=\"2023-12-31\" />";
+        "<input id='timetable' onchange='validateDateOnchange' class=\"routes_dropdown\" type=\"date\" min=\"" + today + "\" max=\"2023-12-31\" />";
     $("#date").html(out);
     getDepartures();
+}
+
+function validateDateOnchange() {
+    validateDate($("#timetable").val());
 }
 
 //this method adds a select for the time of departure, not really used in this version, as we've decided each boat leaves daily, at the same time
@@ -61,6 +66,8 @@ function getDepartures() {
 
 //this method adds an input field for the amount of tickets you're ordering at the same time
 function passengers() {
+    validateDate($("#timetable").val());
+    validateTime($("#depDates").val());
     if (!$.trim($('#amPassengers').html()).length ){
         let out = "<label for='travelers'>Hvor mange reisende?</label>" +
             "<input placeholder='Maks 10' id='pass' type='number' min='1' max='10' class='routes_input' id='travelers'/ onChange='firstname()'>";
@@ -70,6 +77,7 @@ function passengers() {
 
 //this method adds input fields for first and last name, phone and email
 function firstname() {
+    validatePassengers($("#pass").val());
     var pricePer = 0;
     $.get("ticket/getDepartures", function (deps) {
         const route = $("#routes").val();
@@ -158,7 +166,6 @@ function orderTicket() {
                     console.log(janei);
                     window.location.href = "listTickets.html";
                 });
-                alert("Din bilett er bestilt!");
             } else {
                 alert("Feil ble oppdaget i inputfelt!");
                 console.log("Wrong input detected");

@@ -1,25 +1,25 @@
 ﻿function validateRoute(route) {
-    const regexp = /^Velg Rute$/;
+    const regexp = /^Velg rute$/;
     const ok = regexp.test(route);
     if (ok) {
-
+        $("#routes").css({ "border-color": "red" });
         return false
     }
     else {
-
+        $("#routes").css({ "border-color": "#05a95a" });
         return true
     }
 }
 
 function validateDate(date) {
-    const regexp = /^dd\/mm\/yyyy$/;
+    const regexp = /^dd[- \/.]mm[- \/.]yyyy$/;
     const ok = regexp.test(date);
     if (ok) {
-
+        $("#timetable").css({ "border-color": "red" });
         return false
     }
     else {
-
+        $("#timetable").css({ "border-color": "#05a95a" });
         return true
     }
 }
@@ -28,11 +28,22 @@ function validateTime(time) {
     const regexp = /^Velg avreisetid$/;
     const ok = regexp.test(time);
     if (ok) {
-
+        $("#depDates").css({ "border-color": "red" });
         return false
     }
     else {
+        $("#depDates").css({ "border-color": "#05a95a" });
+        return true
+    }
+}
 
+function validatePassengers(passengers) {
+    if (passengers < 1 || passengers == "") {
+        $("#pass").css({ "border-color": "red" });
+        return false
+    }
+    else {
+        $("#pass").css({ "border-color": "#05a95a" });
         return true
     }
 }
@@ -48,7 +59,7 @@ function validateFirstname(firstname) {
     }
     else {
         $("#wrongFirstname").html("");
-        $("#inputFirst").css({ "border-color": "green" });
+        $("#inputFirst").css({ "border-color": "#05a95a" });
         return true;
     }
 }
@@ -63,7 +74,7 @@ function validateLastname(lastname) {
     }
     else {
         $("#wrongLastname").html("");
-        $("#inputLast").css({ "border-color": "green" });
+        $("#inputLast").css({ "border-color": "#05a95a" });
         return true;
     }
 }
@@ -78,7 +89,7 @@ function validateEmail(email) {
     }
     else {
         $("#wrongEmail").html("");
-        $("#inputEmail").css({ "border-color": "green" });
+        $("#inputEmail").css({ "border-color": "#05a95a" });
         return true;
     }
 }
@@ -93,7 +104,7 @@ function validatePhone(phone) {
     }
     else {
         $("#wrongPhone").html("");
-        $("#inputPhone").css({ "border-color": "green" });
+        $("#inputPhone").css({ "border-color": "#05a95a" });
         return true;
     }
 }

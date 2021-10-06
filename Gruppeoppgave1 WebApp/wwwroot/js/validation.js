@@ -1,5 +1,5 @@
 ﻿function validateRoute(route) {
-    const regexp = /^Velg rute$/;
+    const regexp = /\bVelg rute/;
     const ok = regexp.test(route);
     if (ok) {
         $("#routes").css({ "border-color": "red" });

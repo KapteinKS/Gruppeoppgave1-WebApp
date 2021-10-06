@@ -178,7 +178,7 @@ function valider() {
     const lastnameOK = validateLastname($("#inputLast").val());
     const phoneOK = validatePhone($("#inputPhone").val());
     const emailOK = validateEmail($("#inputEmail").val());
-    if (firstnameOK && lastnameOK && phoneOK && emailOK) {
+    if (routeOK && dateOK && timesOK && passengersOK && firstnameOK && lastnameOK && phoneOK && emailOK) {
         return true;
     }
 }

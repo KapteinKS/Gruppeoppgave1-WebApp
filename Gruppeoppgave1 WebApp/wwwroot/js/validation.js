@@ -1,25 +1,25 @@
 ﻿function validateRoute(route) {
-    const regexp = /^Velg Rute$/;
+    const regexp = /^Velg rute$/;
     const ok = regexp.test(route);
     if (ok) {
-
+        $("#routes").css({ "border-color": "red" });
         return false
     }
     else {
-
+        $("#routes").css({ "border-color": "green" });
         return true
     }
 }
 
 function validateDate(date) {
-    const regexp = /^dd\/mm\/yyyy$/;
+    const regexp = /^dd[- \/.]mm[- \/.]yyyy$/;
     const ok = regexp.test(date);
     if (ok) {
-
+        $("#timetable").css({ "border-color": "red" });
         return false
     }
     else {
-
+        $("#timetable").css({ "border-color": "green" });
         return true
     }
 }
@@ -28,11 +28,22 @@ function validateTime(time) {
     const regexp = /^Velg avreisetid$/;
     const ok = regexp.test(time);
     if (ok) {
-
+        $("#depDates").css({ "border-color": "red" });
         return false
     }
     else {
+        $("#depDates").css({ "border-color": "green" });
+        return true
+    }
+}
 
+function validatePassengers(passengers) {
+    if (passengers < 1 || passengers == "") {
+        $("#pass").css({ "border-color": "red" });
+        return false
+    }
+    else {
+        $("#pass").css({ "border-color": "green" });
         return true
     }
 }

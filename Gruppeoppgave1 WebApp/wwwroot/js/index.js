@@ -170,7 +170,6 @@ function orderTicket() {
     });
  };
     
-
 function valider() {
     const routeOK = validateRoute($("#route").val());
     const dateOK = validateDate($("#timetable").val());

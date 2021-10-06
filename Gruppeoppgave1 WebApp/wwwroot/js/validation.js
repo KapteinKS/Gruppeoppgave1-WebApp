@@ -12,9 +12,9 @@
 }
 
 function validateDate(date) {
-    const regexp = /^dd[- \/.]mm[- \/.]yyyy$/;
+    const regexp = /[\d -]/;
     const ok = regexp.test(date);
-    if (ok) {
+    if (!ok) {
         $("#timetable").css({ "border-color": "red" });
         return false
     }

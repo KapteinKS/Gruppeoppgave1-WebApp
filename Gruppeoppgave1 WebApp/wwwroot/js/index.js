@@ -63,7 +63,7 @@ function getDepartures() {
 function passengers() {
     if (!$.trim($('#amPassengers').html()).length ){
         let out = "<label for='travelers'>Hvor mange reisende?</label>" +
-            "<input id='pass' type='number' min='1' max='10' class='routes_input' id='travelers'/ onChange='firstname()'>";
+            "<input placeholder='Maks 10' id='pass' type='number' min='1' max='10' class='routes_input' id='travelers'/ onChange='firstname()'>";
         $("#amPassengers").html(out);
     }
 }
@@ -174,7 +174,7 @@ function valider() {
     const routeOK = validateRoute($("#routes").val());
     const dateOK = validateDate($("#timetable").val());
     const timesOK = validateTime($("#depDates").val());
-    const passengersOK = validatePassengers($("pass").val());
+    const passengersOK = validatePassengers($("#pass").val());
     const firstnameOK = validateFirstname($("#inputFirst").val());
     const lastnameOK = validateLastname($("#inputLast").val());
     const phoneOK = validatePhone($("#inputPhone").val());

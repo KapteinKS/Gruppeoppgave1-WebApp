@@ -6,7 +6,7 @@
         return false
     }
     else {
-        $("#routes").css({ "border-color": "#05a95a" });
+        $("#routes").css({ "border-color": "white" });
         return true
     }
 }
@@ -19,7 +19,7 @@ function validateDate(date) {
         return false
     }
     else {
-        $("#timetable").css({ "border-color": "#05a95a" });
+        $("#timetable").css({ "border-color": "white" });
         return true
     }
 }
@@ -32,18 +32,18 @@ function validateTime(time) {
         return false
     }
     else {
-        $("#depDates").css({ "border-color": "#05a95a" });
+        $("#depDates").css({ "border-color": "white" });
         return true
     }
 }
 
 function validatePassengers(passengers) {
-    if (passengers < 1 || passengers == "") {
+    if (passengers < 1 || passengers > 10 || passengers == "") {
         $("#pass").css({ "border-color": "red" });
         return false
     }
     else {
-        $("#pass").css({ "border-color": "#05a95a" });
+        $("#pass").css({ "border-color": "white" });
         return true
     }
 }
@@ -59,7 +59,7 @@ function validateFirstname(firstname) {
     }
     else {
         $("#wrongFirstname").html("");
-        $("#inputFirst").css({ "border-color": "#05a95a" });
+        $("#inputFirst").css({ "border-color": "white" });
         return true;
     }
 }
@@ -74,7 +74,7 @@ function validateLastname(lastname) {
     }
     else {
         $("#wrongLastname").html("");
-        $("#inputLast").css({ "border-color": "#05a95a" });
+        $("#inputLast").css({ "border-color": "white" });
         return true;
     }
 }
@@ -89,7 +89,7 @@ function validateEmail(email) {
     }
     else {
         $("#wrongEmail").html("");
-        $("#inputEmail").css({ "border-color": "#05a95a" });
+        $("#inputEmail").css({ "border-color": "white" });
         return true;
     }
 }
@@ -104,7 +104,7 @@ function validatePhone(phone) {
     }
     else {
         $("#wrongPhone").html("");
-        $("#inputPhone").css({ "border-color": "#05a95a" });
+        $("#inputPhone").css({ "border-color": "white" });
         return true;
     }
 }

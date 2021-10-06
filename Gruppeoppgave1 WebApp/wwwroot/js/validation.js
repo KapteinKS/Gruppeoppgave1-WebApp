@@ -6,7 +6,7 @@
         return false
     }
     else {
-        $("#routes").css({ "border-color": "green" });
+        $("#routes").css({ "border-color": "#05a95a" });
         return true
     }
 }
@@ -19,7 +19,7 @@ function validateDate(date) {
         return false
     }
     else {
-        $("#timetable").css({ "border-color": "green" });
+        $("#timetable").css({ "border-color": "#05a95a" });
         return true
     }
 }
@@ -32,7 +32,7 @@ function validateTime(time) {
         return false
     }
     else {
-        $("#depDates").css({ "border-color": "green" });
+        $("#depDates").css({ "border-color": "#05a95a" });
         return true
     }
 }
@@ -43,7 +43,7 @@ function validatePassengers(passengers) {
         return false
     }
     else {
-        $("#pass").css({ "border-color": "green" });
+        $("#pass").css({ "border-color": "#05a95a" });
         return true
     }
 }
@@ -59,7 +59,7 @@ function validateFirstname(firstname) {
     }
     else {
         $("#wrongFirstname").html("");
-        $("#inputFirst").css({ "border-color": "green" });
+        $("#inputFirst").css({ "border-color": "#05a95a" });
         return true;
     }
 }
@@ -74,7 +74,7 @@ function validateLastname(lastname) {
     }
     else {
         $("#wrongLastname").html("");
-        $("#inputLast").css({ "border-color": "green" });
+        $("#inputLast").css({ "border-color": "#05a95a" });
         return true;
     }
 }
@@ -89,7 +89,7 @@ function validateEmail(email) {
     }
     else {
         $("#wrongEmail").html("");
-        $("#inputEmail").css({ "border-color": "green" });
+        $("#inputEmail").css({ "border-color": "#05a95a" });
         return true;
     }
 }
@@ -104,7 +104,7 @@ function validatePhone(phone) {
     }
     else {
         $("#wrongPhone").html("");
-        $("#inputPhone").css({ "border-color": "green" });
+        $("#inputPhone").css({ "border-color": "#05a95a" });
         return true;
     }
 }

@@ -35,7 +35,7 @@ function getDates() {
     today = yyyy + '-' + mm + '-' + dd;
     let out = "<label for='timetable'>Reisedato</label>" +
         //making sure people can't order in the past and not too far in the future
-        "<input id='timetable' onchange='validateDateOnchange' class=\"routes_dropdown\" type=\"date\" min=\"" + today + "\" max=\"2023-12-31\" />";
+        "<input id='timetable' onchange='validateDateOnchange()' class=\"routes_dropdown\" type=\"date\" min=\"" + today + "\" max=\"2023-12-31\" />";
     $("#date").html(out);
     getDepartures();
 }

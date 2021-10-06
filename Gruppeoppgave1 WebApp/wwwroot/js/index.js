@@ -117,14 +117,29 @@ function orderTicket() {
             };
 
             //placing the order, and changing window
-            $.get("ticket/orderTicket", bilett, function (janei) {
-                console.log(janei);
-                window.location.href = "listTickets.html";
-            });
-            
+
+            if (valider()) {
+                $.get("ticket/orderTicket", bilett, function (janei) {
+                    console.log(janei);
+                    window.location.href = "listTickets.html";
+                });
+            } else {
+                console.log("Wrong input detected");
+            }
+
         } else {
             console.log("Could not order ticket");
         }
     });
+ };
     
+
+function valider() {
+    const firstnameOK = validateFirstname($("#inputFirst").val());
+    const lastnameOK = validateLastname($("#inputLast").val());
+    const phoneOK = validatePhone($("#inputPhone").val());
+    const emailOK = validateEmail($("#inputEmail").val());
+    if (firstnameOK && lastnameOK && phoneOK && emailOK) {
+        return true;
+    }
 }

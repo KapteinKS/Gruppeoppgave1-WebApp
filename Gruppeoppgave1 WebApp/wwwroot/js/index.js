@@ -109,12 +109,12 @@ function firstname() {
 
             "<div class=\"form-separator\">" +
             "<label for='inputPhone'>Telefon:</label>" +
-            "<input onchange='validateEmail(this.value)' type='tel' id='inputPhone' class='routes_input' />" +
+            "<input onchange='validatePhone(this.value)' type='tel' id='inputPhone' class='routes_input' />" +
             "</div>" +
 
             "<div class=\"form-separator\">" +
             "<label for='inputEmail'>Epost:</label>" +
-            "<input onchange='validatePhone(this.value)' type='email' id='inputEmail' class='routes_input' />" +
+            "<input onchange='validateEmail(this.value)' type='email' id='inputEmail' class='routes_input' />" +
             "</div>" +
 
             "<div id=\"confirm\" class=\"form-separator\">" +

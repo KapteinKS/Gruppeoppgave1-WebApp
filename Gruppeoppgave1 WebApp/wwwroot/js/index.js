@@ -33,8 +33,10 @@ function getDates() {
 
     today = yyyy + '-' + mm + '-' + dd;
     let out = "<label for='timetable'>Reisedato</label>" +
-        "<input id='timetable' class=\"routes_dropdown\" type=\"date\" min=\"" + today + "\" max=\"2023-12-31\" onchange=\"getDepartures()\"/>";
+        //making sure people can't order in the past and not too far in the future
+        "<input id='timetable' class=\"routes_dropdown\" type=\"date\" min=\"" + today + "\" max=\"2023-12-31\" />";
     $("#date").html(out);
+    getDepartures();
 }
 
 //this method adds a select for the time of departure, not really used in this version, as we've decided each boat leaves daily, at the same time
@@ -59,9 +61,11 @@ function getDepartures() {
 
 //this method adds an input field for the amount of tickets you're ordering at the same time
 function passengers() {
-    let out = "<label for='travelers'>Hvor mange reisende?</label>" +
-        "<input id='pass' type='number' min='1' max='10' class='routes_input' id='travelers'/ onChange='firstname()'>";
-    $("#amPassengers").html(out);
+    if (!$.trim($('#amPassengers').html()).length ){
+        let out = "<label for='travelers'>Hvor mange reisende?</label>" +
+            "<input id='pass' type='number' min='1' max='10' class='routes_input' id='travelers'/ onChange='firstname()'>";
+        $("#amPassengers").html(out);
+    }
 }
 
 //this method adds input fields for first and last name, phone and email
@@ -83,35 +87,36 @@ function firstname() {
         $("#price_tag").html("Pris: " + price);
     });
     
-    
-    let out =
-        "<div class=\"form-separator\">" +
+    if (!$.trim($('#textInputs').html()).length) {
+        let out =
+            "<div class=\"form-separator\">" +
             "<label id='fornavn-label' for='inputFirst'>Fornavn:</label>" +
             "<input  type='text' id='inputFirst' class='routes_input' />" +
-        "</div>" +
+            "</div>" +
 
-        "<div class=\"form-separator\">" +
+            "<div class=\"form-separator\">" +
             "<label for='inputLast'>Etternavn:</label>" +
             "<input type='text' id='inputLast' class='routes_input' />" +
-        "</div>" + 
+            "</div>" +
 
-        "<div class=\"form-separator\">" +
+            "<div class=\"form-separator\">" +
             "<label for='inputPhone'>Telefon:</label>" +
             "<input type='tel' id='inputPhone' class='routes_input' />" +
-        "</div>" +
+            "</div>" +
 
-        "<div class=\"form-separator\">" +
+            "<div class=\"form-separator\">" +
             "<label for='inputEmail'>Epost:</label>" +
             "<input type='email' id='inputEmail' class='routes_input' />" +
-        "</div>" +
+            "</div>" +
 
-        "<div id=\"confirm\" class=\"form-separator\">" +
-        "</div>"
+            "<div id=\"confirm\" class=\"form-separator\">" +
+            "</div>"
 
-    let button = "<button type='button' class='routes_dropdown order-button' onclick='orderTicket()'>Bestill</button>";
-    $("#textInputs").html(out);
-    $("#confirm").html(button);
-    $("#spacer").show();
+        let button = "<button type='button' class='routes_dropdown order-button' onclick='orderTicket()'>Bestill</button>";
+        $("#textInputs").html(out);
+        $("#confirm").html(button);
+        $("#spacer").show();
+    }
 }
 
 //this method creates and orders a ticket for x amount of passengers, will soon also include input validation

@@ -174,7 +174,7 @@ function valider() {
     const routeOK = validateRoute($("#route").val());
     const dateOK = validateDate($("#timetable").val());
     const timesOK = validateTime($("#times").val());
-    const passengersOK = validatePassengers($("#amPassengers").val());
+    const passengersOK = validatePassengers($("#pass").val());
     const firstnameOK = validateFirstname($("#inputFirst").val());
     const lastnameOK = validateLastname($("#inputLast").val());
     const phoneOK = validatePhone($("#inputPhone").val());

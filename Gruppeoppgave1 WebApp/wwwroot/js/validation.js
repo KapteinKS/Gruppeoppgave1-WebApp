@@ -1,4 +1,44 @@
-﻿function validateFirstname(firstname) {
+﻿function validateRoute(route) {
+    const regexp = /^Velg Rute$/;
+    const ok = regexp.test(route);
+    if (ok) {
+
+        return false
+    }
+    else {
+
+        return true
+    }
+}
+
+function validateDate(date) {
+    const regexp = /^dd\/mm\/yyyy$/;
+    const ok = regexp.test(date);
+    if (ok) {
+
+        return false
+    }
+    else {
+
+        return true
+    }
+}
+
+function validateTime(time) {
+    const regexp = /^Velg avreisetid$/;
+    const ok = regexp.test(time);
+    if (ok) {
+
+        return false
+    }
+    else {
+
+        return true
+    }
+}
+
+
+function validateFirstname(firstname) {
     const regexp = /^[a-zA-ZæøåÆØÅ. \-]{2,20}$/;
     const ok = regexp.test(firstname);
     if (!ok) {
